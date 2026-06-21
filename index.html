@@ -2495,7 +2495,7 @@ function setTransport(el){document.querySelectorAll('.transport-btn').forEach(b=
 // ─ Gemini ─
 // Point this at YOUR deployed backend proxy (Render/Railway/Fly/Vercel).
 // Use '' to call a same-origin endpoint if frontend + backend share a host.
-const AI_BACKEND = 'https://solo-62d4clbsm-ishwari-g-mhatres-projects.vercel.app';
+const AI_BACKEND = 'https://solo-62d4clbsm-ishwari-g-mhatres-projects.vercel.app/';
 async function callGemini(prompt, isJson){
   // No API key here anymore — the backend injects it from an env var.
   const r=await fetch(`${AI_BACKEND}/api/ai`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,isJson:!!isJson})});
